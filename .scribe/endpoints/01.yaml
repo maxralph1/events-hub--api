@@ -26,35 +26,35 @@ endpoints:
         name: username
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: vfx
+        example: hlnwcdfsda
         type: string
         custom: []
       name:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: zymkpdar
+        example: aqspazatqc
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: nitzsche.kale@example.com
+        example: feeney.melvina@example.net
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: et
+        example: non
         type: string
         custom: []
     cleanBodyParameters:
-      username: vfx
-      name: zymkpdar
-      email: nitzsche.kale@example.com
-      password: et
+      username: hlnwcdfsda
+      name: aqspazatqc
+      email: feeney.melvina@example.net
+      password: non
     fileParameters: []
     responses:
       -
@@ -100,19 +100,19 @@ endpoints:
         name: username
         description: 'Must contain only letters and numbers.'
         required: true
-        example: 4p2wtl6
+        example: 5b0upp3
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: velit
+        example: consequatur
         type: string
         custom: []
     cleanBodyParameters:
-      username: 4p2wtl6
-      password: velit
+      username: 5b0upp3
+      password: consequatur
     fileParameters: []
     responses:
       -
@@ -158,19 +158,19 @@ endpoints:
         name: current_password
         description: ''
         required: true
-        example: voluptatibus
+        example: recusandae
         type: string
         custom: []
       password:
         name: password
         description: ''
         required: true
-        example: consequuntur
+        example: suscipit
         type: string
         custom: []
     cleanBodyParameters:
-      current_password: voluptatibus
-      password: consequuntur
+      current_password: recusandae
+      password: suscipit
     fileParameters: []
     responses:
       -

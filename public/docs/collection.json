@@ -10,8 +10,8 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "0aeb02f4-d718-40ec-a0f5-926437235148",
-        "description": "",
+        "_postman_id": "71475f39-fbd1-4c13-88bf-b367ae510309",
+        "description": "This is the API Documentation to the Events-Hub application.",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
@@ -80,7 +80,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"p\"}"
+                            "raw": "{\"name\":\"nid\"}"
                         },
                         "description": "Creates a new country record."
                     },
@@ -289,7 +289,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"etbnjlooqydor\",\"description\":\"Id et quisquam eos occaecati eveniet.\"}"
+                            "raw": "{\"title\":\"wplbqbzdncwwrzig\",\"description\":\"Aut molestiae alias natus suscipit commodi.\"}"
                         },
                         "description": "Creates a new currency record."
                     },
@@ -477,6 +477,47 @@
                     ]
                 },
                 {
+                    "name": "POST Event",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/v1\/super-admin\/events",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/v1\/super-admin\/events"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"user_id\":\"inventore\",\"event_hall_id\":\"sed\",\"host_id\":\"et\",\"title\":\"nulla\",\"description\":\"distinctio\",\"start_date\":\"2023-07-11T04:39:06\",\"end_date\":\"2023-07-11T04:39:06\",\"age_limit\":58961.436}"
+                        },
+                        "description": "Creates a new event record."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"data\":{\"id\":\"01h3hkhxrh15atksjr11hrck0d\",\"event_hall\":{\"id\":\"01h3hkhxrh15atksjr11hrck0d\",\"name\":\"First Event Hall\",\"description\":\"This is the first event hall.\"},\"host\":{\"id\":\"01h3hkhxrh15atksjr11hrck0d\",\"name\":\"First Host\"},\"title\":\"First Event\",\"slug\":\"first-event\",\"description\":\"This is the first event\",\"start_date\":\"2023-01-23\",\"start_time\":\"01:23\",\"end_date\":\"2023-01-23\",\"end_time\":\"01:23\",\"age_limit\":\"18\", ...}, ...}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 422,
+                            "body": "{\"message\":\"The title field is required.\",\"errors\":{\"title\":[\"The title field is required.\"]}, ...}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
                     "name": "GET Event",
                     "request": {
                         "url": {
@@ -552,7 +593,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"start_date\":\"2023-07-07T11:15:06\",\"end_date\":\"2023-07-07T11:15:06\"}"
+                            "raw": "{\"start_date\":\"2023-07-11T04:39:06\",\"end_date\":\"2023-07-11T04:39:06\"}"
                         },
                         "description": "Updates event record."
                     },
@@ -666,7 +707,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"gskbhbojpejhzpaukenv\"}"
+                            "raw": "{\"name\":\"gqvzngduleyko\"}"
                         },
                         "description": "Creates a new event hall record."
                     },
@@ -875,7 +916,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"subject\":\"vri\",\"message\":\"ppdwcmysivi\"}"
+                            "raw": "{\"subject\":\"lvkthnafqmoe\",\"message\":\"ofbc\"}"
                         },
                         "description": "Creates a new feedback record."
                     },
@@ -1041,7 +1082,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"wsgkpllfmfpxdj\",\"description\":\"Laudantium consequatur harum est porro reiciendis quidem.\"}"
+                            "raw": "{\"name\":\"zfjsnabvmgeuv\",\"description\":\"Suscipit tempora distinctio exercitationem a omnis voluptas eos commodi.\"}"
                         },
                         "description": "Creates a new host record."
                     },
@@ -1250,7 +1291,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"tkmworsgcdfejv\",\"email\":\"iterry@example.net\"}"
+                            "raw": "{\"name\":\"mmztwxdiyvdqtunctbmw\",\"email\":\"ibrahim97@example.com\"}"
                         },
                         "description": "Creates a new newsletter record."
                     },
@@ -1345,7 +1386,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"hartmann.lou@example.com\"}"
+                            "raw": "{\"email\":\"wilfrid33@example.org\"}"
                         },
                         "description": "Updates newsletter record."
                     },
@@ -1459,7 +1500,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"accusantium\",\"description\":\"nulla\"}"
+                            "raw": "{\"title\":\"soluta\",\"description\":\"inventore\"}"
                         },
                         "description": "Creates a new tag record."
                     },
@@ -1490,7 +1531,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "deleniti",
+                                    "value": "commodi",
                                     "description": "The ID of the tag."
                                 }
                             ]
@@ -1536,7 +1577,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quidem",
+                                    "value": "unde",
                                     "description": "The ID of the tag."
                                 }
                             ]
@@ -1579,7 +1620,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "voluptatem",
+                                    "value": "voluptas",
                                     "description": "The ID of the tag."
                                 }
                             ]
@@ -1668,7 +1709,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"event_id\":\"laudantium\",\"ticket_type_id\":\"aut\",\"user_id\":\"ea\",\"amount_paid\":363056,\"currency_id\":\"nihil\",\"payment_confirmed\":false}"
+                            "raw": "{\"event_id\":\"praesentium\",\"ticket_type_id\":\"illo\",\"user_id\":\"voluptatem\",\"amount_paid\":987819,\"currency_id\":\"itaque\",\"payment_confirmed\":false}"
                         },
                         "description": "Creates a new ticket record."
                     },
@@ -1763,7 +1804,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"payment_confirmed\":true}"
+                            "raw": "{\"payment_confirmed\":false}"
                         },
                         "description": "Updates ticket record."
                     },
@@ -1877,7 +1918,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"event_id\":\"non\",\"title\":\"oxjerhrutgac\",\"description\":\"Veritatis voluptatem maiores ducimus earum tempore.\",\"available_tickets\":1709.5553,\"price\":\"voluptatem\",\"currency_id\":\"illum\"}"
+                            "raw": "{\"event_id\":\"illum\",\"title\":\"pvq\",\"description\":\"Odit eaque debitis occaecati voluptatem ipsa sit vel.\",\"available_tickets\":135.7,\"price\":\"magni\",\"currency_id\":\"vel\"}"
                         },
                         "description": "Creates a new ticket type record."
                     },
@@ -2086,7 +2127,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ticket_id\":\"numquam\",\"user_id\":\"nulla\",\"payment_confirmed\":\"vel\"}"
+                            "raw": "{\"ticket_id\":\"neque\",\"user_id\":\"consequatur\",\"payment_confirmed\":\"rerum\"}"
                         },
                         "description": "Creates a new ticket verification record."
                     },
@@ -2617,7 +2658,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"event_id\":\"corrupti\",\"ticket_type_id\":\"quasi\",\"user_id\":\"voluptate\",\"amount_paid\":23435.88270549,\"currency_id\":\"animi\",\"payment_confirmed\":false}"
+                            "raw": "{\"event_id\":\"assumenda\",\"ticket_type_id\":\"sunt\",\"user_id\":\"itaque\",\"amount_paid\":170558.382145,\"currency_id\":\"labore\",\"payment_confirmed\":true}"
                         },
                         "description": "Creates a new ticket record."
                     },
@@ -2743,7 +2784,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"ticket_id\":\"incidunt\",\"user_id\":\"qui\",\"payment_confirmed\":\"animi\"}"
+                            "raw": "{\"ticket_id\":\"quos\",\"user_id\":\"molestias\",\"payment_confirmed\":\"itaque\"}"
                         },
                         "description": "Creates a new ticket verification record."
                     },
@@ -2830,7 +2871,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"username\":\"vfx\",\"name\":\"zymkpdar\",\"email\":\"nitzsche.kale@example.com\",\"password\":\"et\"}"
+                            "raw": "{\"username\":\"hlnwcdfsda\",\"name\":\"aqspazatqc\",\"email\":\"feeney.melvina@example.net\",\"password\":\"non\"}"
                         },
                         "description": "Register with an existing user.",
                         "auth": {
@@ -2874,7 +2915,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"username\":\"4p2wtl6\",\"password\":\"velit\"}"
+                            "raw": "{\"username\":\"5b0upp3\",\"password\":\"consequatur\"}"
                         },
                         "description": "Login with an existing user.",
                         "auth": {
@@ -2918,7 +2959,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"current_password\":\"voluptatibus\",\"password\":\"consequuntur\"}"
+                            "raw": "{\"current_password\":\"recusandae\",\"password\":\"suscipit\"}"
                         },
                         "description": "Reset Password of an existing user."
                     },
@@ -3125,7 +3166,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"subject\":\"zdltxtxhhrbqyv\",\"message\":\"wbpvsbgftbxaddrnid\"}"
+                            "raw": "{\"subject\":\"nqupev\",\"message\":\"jkuzwefbhkcu\"}"
                         },
                         "description": "Creates a new feedback record.",
                         "auth": {
@@ -3339,7 +3380,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"event_id\":\"a\",\"ticket_type_id\":\"quam\",\"user_id\":\"ducimus\",\"amount_paid\":27.3887,\"currency_id\":\"excepturi\",\"payment_confirmed\":true}"
+                            "raw": "{\"event_id\":\"voluptatem\",\"ticket_type_id\":\"distinctio\",\"user_id\":\"corporis\",\"amount_paid\":351667040,\"currency_id\":\"expedita\",\"payment_confirmed\":false}"
                         },
                         "description": "Creates a new ticket record."
                     },
@@ -3505,7 +3546,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"subject\":\"ifhtgbduxgmaurkdbdbnwiyxd\",\"message\":\"cfxzv\"}"
+                            "raw": "{\"subject\":\"bhjbigsntloslv\",\"message\":\"gcvourqhkawlkgryjpslabegl\"}"
                         },
                         "description": "Creates a new feedback record."
                     },

@@ -171,19 +171,19 @@ endpoints:
         name: subject
         description: 'Must not be greater than 150 characters.'
         required: true
-        example: zdltxtxhhrbqyv
+        example: nqupev
         type: string
         custom: []
       message:
         name: message
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: wbpvsbgftbxaddrnid
+        example: jkuzwefbhkcu
         type: string
         custom: []
     cleanBodyParameters:
-      subject: zdltxtxhhrbqyv
-      message: wbpvsbgftbxaddrnid
+      subject: nqupev
+      message: jkuzwefbhkcu
     fileParameters: []
     responses:
       -

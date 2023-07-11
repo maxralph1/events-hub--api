@@ -29,6 +29,7 @@ class StoreEventRequest extends FormRequest
             'description' => 'required',
             'start_date' => 'required|date',
             'start_time' => 'nullable',
+            // 'end_date' => 'nullable|date',
             'end_date' => 'nullable|date|after_or_equal:start_date',
             'end_time' => 'nullable',
             'age_limit' => 'nullable|numeric',

@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: Laravel
-  description: ''
+  description: 'This is the API Documentation to the Events-Hub application.'
   version: 1.0.0
 servers:
   -
@@ -65,7 +65,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 75 characters.'
-                  example: p
+                  example: nid
               required:
                 - name
   '/api/v1/super-admin/countries/{id}':
@@ -199,11 +199,11 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 75 characters.'
-                  example: etbnjlooqydor
+                  example: wplbqbzdncwwrzig
                 description:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: 'Id et quisquam eos occaecati eveniet.'
+                  example: 'Aut molestiae alias natus suscipit commodi.'
               required:
                 - title
                 - description
@@ -310,6 +310,82 @@ paths:
                 example: '{"data":{"id":"01h3hkhxrh15atksjr11hrck0d","event_hall":{"id":"01h3hkhxrh15atksjr11hrck0d","name":"First Event Hall","description":"This is the first event hall."},"host":{"id":"01h3hkhxrh15atksjr11hrck0d","name":"First Host"},"title":"First Event","slug":"first-event","description":"This is the first event","start_date":"2023-01-23","start_time":"01:23","end_date":"2023-01-23","end_time":"01:23","age_limit":"18", ...}, ...}'
       tags:
         - 'Admin endpoints'
+    post:
+      summary: 'POST Event'
+      operationId: pOSTEvent
+      description: 'Creates a new event record.'
+      parameters: []
+      responses:
+        200:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: '{"data":{"id":"01h3hkhxrh15atksjr11hrck0d","event_hall":{"id":"01h3hkhxrh15atksjr11hrck0d","name":"First Event Hall","description":"This is the first event hall."},"host":{"id":"01h3hkhxrh15atksjr11hrck0d","name":"First Host"},"title":"First Event","slug":"first-event","description":"This is the first event","start_date":"2023-01-23","start_time":"01:23","end_date":"2023-01-23","end_time":"01:23","age_limit":"18", ...}, ...}'
+        422:
+          description: ''
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: '{"message":"The title field is required.","errors":{"title":["The title field is required."]}, ...}'
+      tags:
+        - 'Admin endpoints'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                user_id:
+                  type: string
+                  description: ''
+                  example: inventore
+                event_hall_id:
+                  type: string
+                  description: ''
+                  example: sed
+                host_id:
+                  type: string
+                  description: ''
+                  example: et
+                title:
+                  type: string
+                  description: ''
+                  example: nulla
+                description:
+                  type: string
+                  description: ''
+                  example: distinctio
+                start_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-07-11T04:39:06'
+                start_time:
+                  type: string
+                  description: ''
+                  example: null
+                end_date:
+                  type: string
+                  description: 'Must be a valid date.'
+                  example: '2023-07-11T04:39:06'
+                end_time:
+                  type: string
+                  description: ''
+                  example: null
+                age_limit:
+                  type: number
+                  description: ''
+                  example: 58961.436
+              required:
+                - user_id
+                - event_hall_id
+                - host_id
+                - title
+                - description
+                - start_date
   '/api/v1/super-admin/events/{id}':
     get:
       summary: 'GET Event'
@@ -383,7 +459,7 @@ paths:
                 start_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-07-07T11:15:06'
+                  example: '2023-07-11T04:39:06'
                 start_time:
                   type: string
                   description: ''
@@ -391,7 +467,7 @@ paths:
                 end_date:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2023-07-07T11:15:06'
+                  example: '2023-07-11T04:39:06'
                 end_time:
                   type: string
                   description: ''
@@ -477,7 +553,7 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 150 characters.'
-                  example: gskbhbojpejhzpaukenv
+                  example: gqvzngduleyko
                 description:
                   type: string
                   description: ''
@@ -623,11 +699,11 @@ paths:
                 subject:
                   type: string
                   description: 'Must not be greater than 150 characters.'
-                  example: vri
+                  example: lvkthnafqmoe
                 message:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: ppdwcmysivi
+                  example: ofbc
               required:
                 - subject
                 - message
@@ -736,11 +812,11 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 150 characters.'
-                  example: wsgkpllfmfpxdj
+                  example: zfjsnabvmgeuv
                 description:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: 'Laudantium consequatur harum est porro reiciendis quidem.'
+                  example: 'Suscipit tempora distinctio exercitationem a omnis voluptas eos commodi.'
               required:
                 - name
   '/api/v1/super-admin/hosts/{id}':
@@ -878,11 +954,11 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 150 characters.'
-                  example: tkmworsgcdfejv
+                  example: mmztwxdiyvdqtunctbmw
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: iterry@example.net
+                  example: ibrahim97@example.com
               required:
                 - name
                 - email
@@ -943,7 +1019,7 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: hartmann.lou@example.com
+                  example: wilfrid33@example.org
     delete:
       summary: 'DELETE Newsletter'
       operationId: dELETENewsletter
@@ -1021,11 +1097,11 @@ paths:
                 title:
                   type: string
                   description: ''
-                  example: accusantium
+                  example: soluta
                 description:
                   type: string
                   description: ''
-                  example: nulla
+                  example: inventore
               required:
                 - title
                 - description
@@ -1102,7 +1178,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the tag.'
-        example: deleniti
+        example: commodi
         required: true
         schema:
           type: string
@@ -1164,23 +1240,23 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: laudantium
+                  example: praesentium
                 ticket_type_id:
                   type: string
                   description: ''
-                  example: aut
+                  example: illo
                 user_id:
                   type: string
                   description: ''
-                  example: ea
+                  example: voluptatem
                 amount_paid:
                   type: number
                   description: ''
-                  example: 363056.0
+                  example: 987819.0
                 currency_id:
                   type: string
                   description: ''
-                  example: nihil
+                  example: itaque
                 payment_confirmed:
                   type: boolean
                   description: ''
@@ -1264,7 +1340,7 @@ paths:
                 payment_confirmed:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
     delete:
       summary: 'DELETE Ticket'
       operationId: dELETETicket
@@ -1342,27 +1418,27 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: non
+                  example: illum
                 title:
                   type: string
                   description: 'Must not be greater than 155 characters.'
-                  example: oxjerhrutgac
+                  example: pvq
                 description:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: 'Veritatis voluptatem maiores ducimus earum tempore.'
+                  example: 'Odit eaque debitis occaecati voluptatem ipsa sit vel.'
                 available_tickets:
                   type: number
                   description: ''
-                  example: 1709.5553
+                  example: 135.7
                 price:
                   type: string
                   description: ''
-                  example: voluptatem
+                  example: magni
                 currency_id:
                   type: string
                   description: ''
-                  example: illum
+                  example: vel
               required:
                 - event_id
                 - title
@@ -1514,15 +1590,15 @@ paths:
                 ticket_id:
                   type: string
                   description: ''
-                  example: numquam
+                  example: neque
                 user_id:
                   type: string
                   description: ''
-                  example: nulla
+                  example: consequatur
                 payment_confirmed:
                   type: string
                   description: ''
-                  example: vel
+                  example: rerum
               required:
                 - ticket_id
                 - user_id
@@ -1864,27 +1940,27 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: corrupti
+                  example: assumenda
                 ticket_type_id:
                   type: string
                   description: ''
-                  example: quasi
+                  example: sunt
                 user_id:
                   type: string
                   description: ''
-                  example: voluptate
+                  example: itaque
                 amount_paid:
                   type: number
                   description: ''
-                  example: 23435.88270549
+                  example: 170558.382145
                 currency_id:
                   type: string
                   description: ''
-                  example: animi
+                  example: labore
                 payment_confirmed:
                   type: boolean
                   description: ''
-                  example: false
+                  example: true
               required:
                 - event_id
                 - ticket_type_id
@@ -1979,15 +2055,15 @@ paths:
                 ticket_id:
                   type: string
                   description: ''
-                  example: incidunt
+                  example: quos
                 user_id:
                   type: string
                   description: ''
-                  example: qui
+                  example: molestias
                 payment_confirmed:
                   type: string
                   description: ''
-                  example: animi
+                  example: itaque
               required:
                 - ticket_id
                 - user_id
@@ -2080,19 +2156,19 @@ paths:
                 username:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: vfx
+                  example: hlnwcdfsda
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: zymkpdar
+                  example: aqspazatqc
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: nitzsche.kale@example.com
+                  example: feeney.melvina@example.net
                 password:
                   type: string
                   description: ''
-                  example: et
+                  example: non
               required:
                 - username
                 - name
@@ -2150,11 +2226,11 @@ paths:
                 username:
                   type: string
                   description: 'Must contain only letters and numbers.'
-                  example: 4p2wtl6
+                  example: 5b0upp3
                 password:
                   type: string
                   description: ''
-                  example: velit
+                  example: consequatur
               required:
                 - username
                 - password
@@ -2190,11 +2266,11 @@ paths:
                 current_password:
                   type: string
                   description: ''
-                  example: voluptatibus
+                  example: recusandae
                 password:
                   type: string
                   description: ''
-                  example: consequuntur
+                  example: suscipit
               required:
                 - current_password
                 - password
@@ -2337,11 +2413,11 @@ paths:
                 subject:
                   type: string
                   description: 'Must not be greater than 150 characters.'
-                  example: zdltxtxhhrbqyv
+                  example: nqupev
                 message:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: wbpvsbgftbxaddrnid
+                  example: jkuzwefbhkcu
               required:
                 - subject
                 - message
@@ -2492,27 +2568,27 @@ paths:
                 event_id:
                   type: string
                   description: ''
-                  example: a
+                  example: voluptatem
                 ticket_type_id:
                   type: string
                   description: ''
-                  example: quam
+                  example: distinctio
                 user_id:
                   type: string
                   description: ''
-                  example: ducimus
+                  example: corporis
                 amount_paid:
                   type: number
                   description: ''
-                  example: 27.3887
+                  example: 351667040.0
                 currency_id:
                   type: string
                   description: ''
-                  example: excepturi
+                  example: expedita
                 payment_confirmed:
                   type: boolean
                   description: ''
-                  example: true
+                  example: false
               required:
                 - event_id
                 - ticket_type_id
@@ -2628,11 +2704,11 @@ paths:
                 subject:
                   type: string
                   description: 'Must not be greater than 150 characters.'
-                  example: ifhtgbduxgmaurkdbdbnwiyxd
+                  example: bhjbigsntloslv
                 message:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: cfxzv
+                  example: gcvourqhkawlkgryjpslabegl
               required:
                 - subject
                 - message

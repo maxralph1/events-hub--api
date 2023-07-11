@@ -72,11 +72,11 @@ endpoints:
         name: name
         description: 'Must not be greater than 75 characters.'
         required: true
-        example: p
+        example: nid
         type: string
         custom: []
     cleanBodyParameters:
-      name: p
+      name: nid
     fileParameters: []
     responses:
       -
@@ -312,19 +312,19 @@ endpoints:
         name: title
         description: 'Must not be greater than 75 characters.'
         required: true
-        example: etbnjlooqydor
+        example: wplbqbzdncwwrzig
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: 'Id et quisquam eos occaecati eveniet.'
+        example: 'Aut molestiae alias natus suscipit commodi.'
         type: string
         custom: []
     cleanBodyParameters:
-      title: etbnjlooqydor
-      description: 'Id et quisquam eos occaecati eveniet.'
+      title: wplbqbzdncwwrzig
+      description: 'Aut molestiae alias natus suscipit commodi.'
     fileParameters: []
     responses:
       -
@@ -544,6 +544,126 @@ endpoints:
     custom: []
   -
     httpMethods:
+      - POST
+    uri: api/v1/super-admin/events
+    metadata:
+      groupName: 'Admin endpoints'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'POST Event'
+      description: 'Creates a new event record.'
+      authenticated: true
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      user_id:
+        name: user_id
+        description: ''
+        required: true
+        example: inventore
+        type: string
+        custom: []
+      event_hall_id:
+        name: event_hall_id
+        description: ''
+        required: true
+        example: sed
+        type: string
+        custom: []
+      host_id:
+        name: host_id
+        description: ''
+        required: true
+        example: et
+        type: string
+        custom: []
+      title:
+        name: title
+        description: ''
+        required: true
+        example: nulla
+        type: string
+        custom: []
+      description:
+        name: description
+        description: ''
+        required: true
+        example: distinctio
+        type: string
+        custom: []
+      start_date:
+        name: start_date
+        description: 'Must be a valid date.'
+        required: true
+        example: '2023-07-11T04:39:06'
+        type: string
+        custom: []
+      start_time:
+        name: start_time
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      end_date:
+        name: end_date
+        description: 'Must be a valid date.'
+        required: false
+        example: '2023-07-11T04:39:06'
+        type: string
+        custom: []
+      end_time:
+        name: end_time
+        description: ''
+        required: false
+        example: null
+        type: string
+        custom: []
+      age_limit:
+        name: age_limit
+        description: ''
+        required: false
+        example: 58961.436
+        type: number
+        custom: []
+    cleanBodyParameters:
+      user_id: inventore
+      event_hall_id: sed
+      host_id: et
+      title: nulla
+      description: distinctio
+      start_date: '2023-07-11T04:39:06'
+      end_date: '2023-07-11T04:39:06'
+      age_limit: 58961.436
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"id":"01h3hkhxrh15atksjr11hrck0d","event_hall":{"id":"01h3hkhxrh15atksjr11hrck0d","name":"First Event Hall","description":"This is the first event hall."},"host":{"id":"01h3hkhxrh15atksjr11hrck0d","name":"First Host"},"title":"First Event","slug":"first-event","description":"This is the first event","start_date":"2023-01-23","start_time":"01:23","end_date":"2023-01-23","end_time":"01:23","age_limit":"18", ...}, ...}'
+        headers: []
+        description: ''
+        custom: []
+      -
+        status: 422
+        content: '{"message":"The title field is required.","errors":{"title":["The title field is required."]}, ...}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
       - GET
     uri: 'api/v1/super-admin/events/{id}'
     metadata:
@@ -661,7 +781,7 @@ endpoints:
         name: start_date
         description: 'Must be a valid date.'
         required: false
-        example: '2023-07-07T11:15:06'
+        example: '2023-07-11T04:39:06'
         type: string
         custom: []
       start_time:
@@ -675,7 +795,7 @@ endpoints:
         name: end_date
         description: 'Must be a valid date.'
         required: false
-        example: '2023-07-07T11:15:06'
+        example: '2023-07-11T04:39:06'
         type: string
         custom: []
       end_time:
@@ -693,8 +813,8 @@ endpoints:
         type: string
         custom: []
     cleanBodyParameters:
-      start_date: '2023-07-07T11:15:06'
-      end_date: '2023-07-07T11:15:06'
+      start_date: '2023-07-11T04:39:06'
+      end_date: '2023-07-11T04:39:06'
     fileParameters: []
     responses:
       -
@@ -822,7 +942,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 150 characters.'
         required: true
-        example: gskbhbojpejhzpaukenv
+        example: gqvzngduleyko
         type: string
         custom: []
       description:
@@ -833,7 +953,7 @@ endpoints:
         type: string
         custom: []
     cleanBodyParameters:
-      name: gskbhbojpejhzpaukenv
+      name: gqvzngduleyko
     fileParameters: []
     responses:
       -
@@ -1083,19 +1203,19 @@ endpoints:
         name: subject
         description: 'Must not be greater than 150 characters.'
         required: true
-        example: vri
+        example: lvkthnafqmoe
         type: string
         custom: []
       message:
         name: message
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ppdwcmysivi
+        example: ofbc
         type: string
         custom: []
     cleanBodyParameters:
-      subject: vri
-      message: ppdwcmysivi
+      subject: lvkthnafqmoe
+      message: ofbc
     fileParameters: []
     responses:
       -
@@ -1279,19 +1399,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 150 characters.'
         required: true
-        example: wsgkpllfmfpxdj
+        example: zfjsnabvmgeuv
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 255 characters.'
         required: false
-        example: 'Laudantium consequatur harum est porro reiciendis quidem.'
+        example: 'Suscipit tempora distinctio exercitationem a omnis voluptas eos commodi.'
         type: string
         custom: []
     cleanBodyParameters:
-      name: wsgkpllfmfpxdj
-      description: 'Laudantium consequatur harum est porro reiciendis quidem.'
+      name: zfjsnabvmgeuv
+      description: 'Suscipit tempora distinctio exercitationem a omnis voluptas eos commodi.'
     fileParameters: []
     responses:
       -
@@ -1534,19 +1654,19 @@ endpoints:
         name: name
         description: 'Must not be greater than 150 characters.'
         required: true
-        example: tkmworsgcdfejv
+        example: mmztwxdiyvdqtunctbmw
         type: string
         custom: []
       email:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: iterry@example.net
+        example: ibrahim97@example.com
         type: string
         custom: []
     cleanBodyParameters:
-      name: tkmworsgcdfejv
-      email: iterry@example.net
+      name: mmztwxdiyvdqtunctbmw
+      email: ibrahim97@example.com
     fileParameters: []
     responses:
       -
@@ -1658,11 +1778,11 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: false
-        example: hartmann.lou@example.com
+        example: wilfrid33@example.org
         type: string
         custom: []
     cleanBodyParameters:
-      email: hartmann.lou@example.com
+      email: wilfrid33@example.org
     fileParameters: []
     responses:
       -
@@ -1790,19 +1910,19 @@ endpoints:
         name: title
         description: ''
         required: true
-        example: accusantium
+        example: soluta
         type: string
         custom: []
       description:
         name: description
         description: ''
         required: true
-        example: nulla
+        example: inventore
         type: string
         custom: []
     cleanBodyParameters:
-      title: accusantium
-      description: nulla
+      title: soluta
+      description: inventore
     fileParameters: []
     responses:
       -
@@ -1844,11 +1964,11 @@ endpoints:
         name: id
         description: 'The ID of the tag.'
         required: true
-        example: deleniti
+        example: commodi
         type: string
         custom: []
     cleanUrlParameters:
-      id: deleniti
+      id: commodi
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -1895,11 +2015,11 @@ endpoints:
         name: id
         description: 'The ID of the tag.'
         required: true
-        example: quidem
+        example: unde
         type: string
         custom: []
     cleanUrlParameters:
-      id: quidem
+      id: unde
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -1953,11 +2073,11 @@ endpoints:
         name: id
         description: 'The ID of the tag.'
         required: true
-        example: voluptatem
+        example: voluptas
         type: string
         custom: []
     cleanUrlParameters:
-      id: voluptatem
+      id: voluptas
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -2045,35 +2165,35 @@ endpoints:
         name: event_id
         description: ''
         required: true
-        example: laudantium
+        example: praesentium
         type: string
         custom: []
       ticket_type_id:
         name: ticket_type_id
         description: ''
         required: true
-        example: aut
+        example: illo
         type: string
         custom: []
       user_id:
         name: user_id
         description: ''
         required: true
-        example: ea
+        example: voluptatem
         type: string
         custom: []
       amount_paid:
         name: amount_paid
         description: ''
         required: true
-        example: 363056.0
+        example: 987819.0
         type: number
         custom: []
       currency_id:
         name: currency_id
         description: ''
         required: true
-        example: nihil
+        example: itaque
         type: string
         custom: []
       payment_confirmed:
@@ -2084,11 +2204,11 @@ endpoints:
         type: boolean
         custom: []
     cleanBodyParameters:
-      event_id: laudantium
-      ticket_type_id: aut
-      user_id: ea
-      amount_paid: 363056.0
-      currency_id: nihil
+      event_id: praesentium
+      ticket_type_id: illo
+      user_id: voluptatem
+      amount_paid: 987819.0
+      currency_id: itaque
       payment_confirmed: false
     fileParameters: []
     responses:
@@ -2229,11 +2349,11 @@ endpoints:
         name: payment_confirmed
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         custom: []
     cleanBodyParameters:
-      payment_confirmed: true
+      payment_confirmed: false
     fileParameters: []
     responses:
       -
@@ -2361,51 +2481,51 @@ endpoints:
         name: event_id
         description: ''
         required: true
-        example: non
+        example: illum
         type: string
         custom: []
       title:
         name: title
         description: 'Must not be greater than 155 characters.'
         required: true
-        example: oxjerhrutgac
+        example: pvq
         type: string
         custom: []
       description:
         name: description
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: 'Veritatis voluptatem maiores ducimus earum tempore.'
+        example: 'Odit eaque debitis occaecati voluptatem ipsa sit vel.'
         type: string
         custom: []
       available_tickets:
         name: available_tickets
         description: ''
         required: true
-        example: 1709.5553
+        example: 135.7
         type: number
         custom: []
       price:
         name: price
         description: ''
         required: true
-        example: voluptatem
+        example: magni
         type: string
         custom: []
       currency_id:
         name: currency_id
         description: ''
         required: true
-        example: illum
+        example: vel
         type: string
         custom: []
     cleanBodyParameters:
-      event_id: non
-      title: oxjerhrutgac
-      description: 'Veritatis voluptatem maiores ducimus earum tempore.'
-      available_tickets: 1709.5553
-      price: voluptatem
-      currency_id: illum
+      event_id: illum
+      title: pvq
+      description: 'Odit eaque debitis occaecati voluptatem ipsa sit vel.'
+      available_tickets: 135.7
+      price: magni
+      currency_id: vel
     fileParameters: []
     responses:
       -
@@ -2676,27 +2796,27 @@ endpoints:
         name: ticket_id
         description: ''
         required: true
-        example: numquam
+        example: neque
         type: string
         custom: []
       user_id:
         name: user_id
         description: ''
         required: true
-        example: nulla
+        example: consequatur
         type: string
         custom: []
       payment_confirmed:
         name: payment_confirmed
         description: ''
         required: true
-        example: vel
+        example: rerum
         type: string
         custom: []
     cleanBodyParameters:
-      ticket_id: numquam
-      user_id: nulla
-      payment_confirmed: vel
+      ticket_id: neque
+      user_id: consequatur
+      payment_confirmed: rerum
     fileParameters: []
     responses:
       -
@@ -3303,51 +3423,51 @@ endpoints:
         name: event_id
         description: ''
         required: true
-        example: corrupti
+        example: assumenda
         type: string
         custom: []
       ticket_type_id:
         name: ticket_type_id
         description: ''
         required: true
-        example: quasi
+        example: sunt
         type: string
         custom: []
       user_id:
         name: user_id
         description: ''
         required: true
-        example: voluptate
+        example: itaque
         type: string
         custom: []
       amount_paid:
         name: amount_paid
         description: ''
         required: true
-        example: 23435.88270549
+        example: 170558.382145
         type: number
         custom: []
       currency_id:
         name: currency_id
         description: ''
         required: true
-        example: animi
+        example: labore
         type: string
         custom: []
       payment_confirmed:
         name: payment_confirmed
         description: ''
         required: false
-        example: false
+        example: true
         type: boolean
         custom: []
     cleanBodyParameters:
-      event_id: corrupti
-      ticket_type_id: quasi
-      user_id: voluptate
-      amount_paid: 23435.88270549
-      currency_id: animi
-      payment_confirmed: false
+      event_id: assumenda
+      ticket_type_id: sunt
+      user_id: itaque
+      amount_paid: 170558.382145
+      currency_id: labore
+      payment_confirmed: true
     fileParameters: []
     responses:
       -
@@ -3487,27 +3607,27 @@ endpoints:
         name: ticket_id
         description: ''
         required: true
-        example: incidunt
+        example: quos
         type: string
         custom: []
       user_id:
         name: user_id
         description: ''
         required: true
-        example: qui
+        example: molestias
         type: string
         custom: []
       payment_confirmed:
         name: payment_confirmed
         description: ''
         required: true
-        example: animi
+        example: itaque
         type: string
         custom: []
     cleanBodyParameters:
-      ticket_id: incidunt
-      user_id: qui
-      payment_confirmed: animi
+      ticket_id: quos
+      user_id: molestias
+      payment_confirmed: itaque
     fileParameters: []
     responses:
       -

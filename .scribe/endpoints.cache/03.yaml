@@ -210,51 +210,51 @@ endpoints:
         name: event_id
         description: ''
         required: true
-        example: a
+        example: voluptatem
         type: string
         custom: []
       ticket_type_id:
         name: ticket_type_id
         description: ''
         required: true
-        example: quam
+        example: distinctio
         type: string
         custom: []
       user_id:
         name: user_id
         description: ''
         required: true
-        example: ducimus
+        example: corporis
         type: string
         custom: []
       amount_paid:
         name: amount_paid
         description: ''
         required: true
-        example: 27.3887
+        example: 351667040.0
         type: number
         custom: []
       currency_id:
         name: currency_id
         description: ''
         required: true
-        example: excepturi
+        example: expedita
         type: string
         custom: []
       payment_confirmed:
         name: payment_confirmed
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         custom: []
     cleanBodyParameters:
-      event_id: a
-      ticket_type_id: quam
-      user_id: ducimus
-      amount_paid: 27.3887
-      currency_id: excepturi
-      payment_confirmed: true
+      event_id: voluptatem
+      ticket_type_id: distinctio
+      user_id: corporis
+      amount_paid: 351667040.0
+      currency_id: expedita
+      payment_confirmed: false
     fileParameters: []
     responses:
       -
@@ -445,19 +445,19 @@ endpoints:
         name: subject
         description: 'Must not be greater than 150 characters.'
         required: true
-        example: ifhtgbduxgmaurkdbdbnwiyxd
+        example: bhjbigsntloslv
         type: string
         custom: []
       message:
         name: message
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: cfxzv
+        example: gcvourqhkawlkgryjpslabegl
         type: string
         custom: []
     cleanBodyParameters:
-      subject: ifhtgbduxgmaurkdbdbnwiyxd
-      message: cfxzv
+      subject: bhjbigsntloslv
+      message: gcvourqhkawlkgryjpslabegl
     fileParameters: []
     responses:
       -
